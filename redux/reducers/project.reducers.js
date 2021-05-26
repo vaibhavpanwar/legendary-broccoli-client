@@ -34,7 +34,7 @@ export const projectsReducer = (state = { projects: [] }, action) => {
         projects: state.projects.filter((i) => i._id !== action.payload),
       };
     case projectConstants.ERROR:
-      return { loading: false, error: action.payload };
+      return { ...state, loading: false, error: action.payload };
 
     default:
       return state;
