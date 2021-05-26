@@ -7,9 +7,60 @@
     "build": "next build",
     "start": "next start"
   },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true,
+              "preprocess": false
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": false
+            }
+          ]
+        ]
+      }
+    }
+  },
   "dependencies": {
+    "axios": "^0.21.1",
+    "babel-preset-next": "^1.4.0",
+    "cogo-toast": "^4.2.3",
+    "firebase": "^8.6.2",
     "next": "10.2.2",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.7.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-firebase-file-uploader": "^2.4.4",
+    "react-redux": "^7.2.4",
+    "react-slick": "^0.28.1",
+    "react-sweet-progress": "^1.1.2",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
   }
 }
